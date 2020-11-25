@@ -1,0 +1,44 @@
+unit Unit3;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  StdCtrls, Buttons, ComCtrls, ExtCtrls, XP_Form, XP_Button;
+
+type
+  TForm3 = class(TForm)
+    tfXPForm1: TtfXPForm;
+    a: TRichEdit;
+    BitBtn1: TBitBtn;
+    tfXPButton1: TtfXPButton;
+    procedure BitBtn1Click(Sender: TObject);
+    procedure tfXPButton1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form3: TForm3;
+
+implementation
+
+uses Unit1;
+
+{$R *.DFM}
+
+procedure TForm3.BitBtn1Click(Sender: TObject);
+begin
+form1.Timer5.enabled:=true;
+Form3.visible:=false;
+end;
+
+procedure TForm3.tfXPButton1Click(Sender: TObject);
+begin
+form1.timer3.Enabled:=false;
+form1.Timer2.Enabled:=false;
+end;
+
+end.
